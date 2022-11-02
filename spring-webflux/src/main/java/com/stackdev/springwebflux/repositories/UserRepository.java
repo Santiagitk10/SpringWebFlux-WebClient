@@ -7,3 +7,6 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface UserRepository extends ReactiveCrudRepository<Users, Long> {
 }
+
+//Se extiende del ReactiveCrudRepository porque no se está usando JPA. JPA funciona con bases
+//de datos relacionales, Hibernate es una implementación de JPA

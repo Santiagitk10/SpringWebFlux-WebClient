@@ -17,6 +17,7 @@ public class DBConfig extends AbstractR2dbcConfiguration {
         return ConnectionFactories.get("r2dbc:postgresql://localhost:5433/testdb");
     }
 
+    //Con esto se inicializa la base de datos sql basado en los archivos sql que se han creado
 
     @Bean
     public ConnectionFactoryInitializer initializer(ConnectionFactory connectionFactory){

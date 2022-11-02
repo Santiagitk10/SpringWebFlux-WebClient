@@ -42,6 +42,9 @@ public class UserService {
                     if(user.getEmail() != null) olderUser.setEmail(user.getEmail());
                     return  olderUser;
                 })
+                //map me devuelve un Mono<Users> y al hacerle el save tendría 
+                //Mono<Mono<User>> por eso necesito aplanarlo para obeter lo que retorna
+                //este método que es un Mono<User> 
                 .flatMap(userRepository::save);
     }
 
