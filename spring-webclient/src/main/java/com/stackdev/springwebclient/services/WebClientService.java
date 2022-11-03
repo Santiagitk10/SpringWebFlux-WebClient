@@ -33,6 +33,7 @@ public class WebClientService {
         return this.webClient.post().uri("/save")
                 .header(HttpHeaders.CONTENT_TYPE, MediaType.APPLICATION_JSON_VALUE)
                 .body(Mono.just(user), Users.class)
+                //Se usa solo para retornar el status de request y los headers
                 .exchange();
     }
 
